@@ -48,12 +48,16 @@ FYP/
 
 ## Frontend Setup
 1.Open a New Terminal Window (while the backend server is running).
-2.**Navigate to the Frontend Directory**:
-cd path/to/FYP/FYP
-3.**Install Dependencies**:
-npm install
-4.**Start the Frontend Application**:
-npm start
+1. **Navigate to the Backend Directory**:
+   ```bash
+   cd path/to/FYP/FYP
+
+
+  2. **Install Dependencies**
+    npm install
+
+ 3. **Start the Frontend Server**
+   npm start
 
 
 **Running the Project**
