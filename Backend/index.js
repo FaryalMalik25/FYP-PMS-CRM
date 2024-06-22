@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const createIssue = require('./create-issue.js');
 const createProject = require('./create-project.js');
-const getIssueByID = require('./get-issue-by-id.js');
+
 const deleteIssueByID = require('./delete-issue-by-id.js');
 const getIssues = require('./get-issues.js');
 const getTransitions = require('./get-transitions.js');
 const getUsers = require('./get-users.js');
-const updateStatus = require('./update-status.js');
+
 const  getAllProjectDetails = require('./get-projects.js');
 const User = require('./models/User'); // User model
 const bcrypt = require('bcryptjs');
