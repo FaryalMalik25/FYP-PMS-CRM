@@ -1,7 +1,7 @@
 # Project Management System and CRM
 
 ## Overview
-This project is a comprehensive solution for managing projects and customer relationships. It consists of two main parts: the backend, built with Express.js, and the frontend, built with Angular.
+This project is a comprehensive solution for managing projects and customer relationships. It is a complete MEAN stack project.
 
 ## Features
 User Authentication: Secure signup and login using JSON Web Tokens (JWT).
