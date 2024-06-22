@@ -1,0 +1,74 @@
+.compose-message {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .compose-message h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .compose-message form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .compose-message label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .compose-message select,
+  .compose-message input,
+  .compose-message textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .compose-message textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .compose-message button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .compose-message button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .compose-message {
+      padding: 15px;
+    }
+  
+    .compose-message h2 {
+      font-size: 20px;
+    }
+  
+    .compose-message button {
+      font-size: 14px;
+    }
+  }
+  

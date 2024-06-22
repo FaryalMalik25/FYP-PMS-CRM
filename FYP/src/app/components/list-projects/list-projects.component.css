@@ -1,0 +1,23 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+/* .table tbody tr:nth-child(odd) {
+  background-color: #ec4b53;
+} */
+
+canvas {
+  width: 400px !important;
+  height: 300px !important; /* Adjust height as needed */
+}

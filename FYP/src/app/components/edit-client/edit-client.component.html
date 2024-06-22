@@ -1,0 +1,15 @@
+<form *ngIf="clientForm" [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="client-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput id="email" formControlName="email" type="email">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput id="fname" formControlName="fname" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput id="lname" formControlName="lname" type="text">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Update Client</button>
+</form>

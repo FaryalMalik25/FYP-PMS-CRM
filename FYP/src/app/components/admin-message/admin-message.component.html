@@ -1,0 +1,446 @@
+
+<div class=" bg-gray-100 ">
+    <section>
+      <div class="flex flex-row flex-wrap min-h-screen ">
+        <div class="bg-white hidden xl:block lg:block float-left w-1/5  " id="mobile-menu" *ngIf="mobileMenu">
+          <div class="flex-shrink-0   p-3">
+            <img class="h-9 w-9" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              alt="Your Company">
+          </div>
+          <div class="space-y-1 px-2 pb-[26px] pt-3 ">
+  
+            <a routerLink="/admin"
+              class="parent-hover:text-white focus:bg-gray-700 hover:bg-gray-700  block rounded-md  text-base font-medium"
+              role="menuitem" tabindex="-1" id="menu-item-0">
+              <div
+                class=" flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black   hover:bg-gray-100 items-center ">
+                <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V15C22 16.6569 20.6569 18 19 18H13V19H15C15.5523 19 16 19.4477 16 20C16 20.5523 15.5523 21 15 21H9C8.44772 21 8 20.5523 8 20C8 19.4477 8.44772 19 9 19H11V18H5C3.34315 18 2 16.6569 2 15V6ZM5 5C4.44772 5 4 5.44772 4 6V15C4 15.5523 4.44772 16 5 16H19C19.5523 16 20 15.5523 20 15V6C20 5.44772 19.5523 5 19 5H5Z"
+                      fill="#ded9d9"></path>
+                  </g>
+                </svg>
+                <p class="pl-3">Dashboard</p>
+              </div>
+            </a>
+            <a routerLink="/client-list"
+              class="parent-hover:text-black focus:bg-gray-700  hover:bg-gray-700  block rounded-md  text-base font-medium"
+              role="menuitem" tabindex="-1" id="menu-item-0">
+              <div class="flex text-gray-400  pl-3 py-3 rounded-md  hover:bg-gray-100 hover:text-black  ">
+                <svg fill="#b2aeae" width="23px" height="23px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title></title>
+                    <g data-name="Layer 28" id="Layer_28">
+                      <path
+                        d="M28,21H27V7a1,1,0,0,0-1-1H6A1,1,0,0,0,5,7V21H4a1,1,0,0,0-1,1,5,5,0,0,0,5,5H24a5,5,0,0,0,5-5A1,1,0,0,0,28,21ZM7,8H25V21H7ZM24,25H8a3,3,0,0,1-2.83-2H26.83A3,3,0,0,1,24,25Z">
+                      </path>
+                      <path
+                        d="M19,11.79l-4.29,4.3L13,14.29a1,1,0,0,0-1.42,1.42l2.5,2.5a1,1,0,0,0,1.42,0l5-5A1,1,0,0,0,19,11.79Z">
+                      </path>
+                    </g>
+                  </g>
+                </svg>
+                <p class="pl-3">Clients</p>
+              </div>
+            </a>
+            <a routerLink="/All-Projects"
+              class="parent-hover:text-black focus:bg-gray-700 hover:bg-gray-700 block rounded-md  text-base font-medium"
+              role="menuitem" tabindex="-1" id="menu-item-0">
+              <div
+                class=" flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black   hover:bg-gray-100 items-center ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                </svg>
+                <p class="pl-3">Projects</p>
+              </div>
+            </a>
+            <a href=""  routerLink="list-tasks"
+              class="hover:bg-gray-700 parent-hover:text-white focus:bg-gray-700 block rounded-md  text-base font-medium">
+              <div class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black  hover:bg-gray-100 items-center ">
+                <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g id="Interface / Checkbox_Check">
+                      <path id="Vector"
+                        d="M8 12L11 15L16 9M4 16.8002V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2842 4.21799 18.9079C4 18.4801 4 17.9203 4 16.8002Z"
+                        stroke="#b9b6b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </g>
+                </svg>
+                <p class="pl-3">Tasks</p>
+              </div>
+            </a>
+  
+  
+            <a href="#" routerLink="/invoice"
+              class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+              <div class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M9 17H15M9 13H15M9 9H10M13 3H8.2C7.0799 3 6.51984 3 6.09202 3.21799C5.71569 3.40973 5.40973 3.71569 5.21799 4.09202C5 4.51984 5 5.0799 5 6.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.0799 21 8.2 21H15.8C16.9201 21 17.4802 21 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C19 19.4802 19 18.9201 19 17.8V9M13 3L19 9M13 3V7.4C13 7.96005 13 8.24008 13.109 8.45399C13.2049 8.64215 13.3578 8.79513 13.546 8.89101C13.7599 9 14.0399 9 14.6 9H19"
+                      stroke="#cccccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                <p class="pl-3">Invoices</p>
+              </div>
+            </a>
+            <a href="#"
+              class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+              <div class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                <svg fill="#c0b9b9" width="23px" height="23px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+                  class="icon">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M824.2 699.9a301.55 301.55 0 0 0-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 0 0-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 0 0 8 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 0 1 612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 0 0 8-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 0 1-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 0 1 612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 0 1-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 0 0 8 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z">
+                    </path>
+                  </g>
+                </svg>
+                <p class="pl-3">Message</p>
+              </div>
+            </a>
+            <a href="#"
+              class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+              <div class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  stroke="#a39e9e">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M11 16L15 12M15 12L11 8M15 12H3M4.51555 17C6.13007 19.412 8.87958 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C8.87958 3 6.13007 4.58803 4.51555 7"
+                      stroke="#c1bebe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                <p class="pl-3">Expenses</p>
+              </div>
+            </a>
+  
+            <a href="#"
+              class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+              <div class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                <svg width="23px" height="23px" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg"
+                  fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#c7c7c7"
+                      d="M192 128v768h640V128H192zm-32-64h704a32 32 0 0132 32v832a32 32 0 01-32 32H160a32 32 0 01-32-32V96a32 32 0 0132-32zm160 448h384v64H320v-64zm0-192h192v64H320v-64zm0 384h384v64H320v-64z">
+                    </path>
+                  </g>
+                </svg>
+                <p class="pl-3">Tickets</p>
+              </div>
+            </a>
+  
+            <a href="#"
+              class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+              <div class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <circle cx="12" cy="12" r="3" stroke="#d3d3d4" stroke-width="1.5"></circle>
+                    <path
+                      d="M13.7654 2.15224C13.3978 2 12.9319 2 12 2C11.0681 2 10.6022 2 10.2346 2.15224C9.74457 2.35523 9.35522 2.74458 9.15223 3.23463C9.05957 3.45834 9.0233 3.7185 9.00911 4.09799C8.98826 4.65568 8.70226 5.17189 8.21894 5.45093C7.73564 5.72996 7.14559 5.71954 6.65219 5.45876C6.31645 5.2813 6.07301 5.18262 5.83294 5.15102C5.30704 5.08178 4.77518 5.22429 4.35436 5.5472C4.03874 5.78938 3.80577 6.1929 3.33983 6.99993C2.87389 7.80697 2.64092 8.21048 2.58899 8.60491C2.51976 9.1308 2.66227 9.66266 2.98518 10.0835C3.13256 10.2756 3.3397 10.437 3.66119 10.639C4.1338 10.936 4.43789 11.4419 4.43786 12C4.43783 12.5581 4.13375 13.0639 3.66118 13.3608C3.33965 13.5629 3.13248 13.7244 2.98508 13.9165C2.66217 14.3373 2.51966 14.8691 2.5889 15.395C2.64082 15.7894 2.87379 16.193 3.33973 17C3.80568 17.807 4.03865 18.2106 4.35426 18.4527C4.77508 18.7756 5.30694 18.9181 5.83284 18.8489C6.07289 18.8173 6.31632 18.7186 6.65204 18.5412C7.14547 18.2804 7.73556 18.27 8.2189 18.549C8.70224 18.8281 8.98826 19.3443 9.00911 19.9021C9.02331 20.2815 9.05957 20.5417 9.15223 20.7654C9.35522 21.2554 9.74457 21.6448 10.2346 21.8478C10.6022 22 11.0681 22 12 22C12.9319 22 13.3978 22 13.7654 21.8478C14.2554 21.6448 14.6448 21.2554 14.8477 20.7654C14.9404 20.5417 14.9767 20.2815 14.9909 19.902C15.0117 19.3443 15.2977 18.8281 15.781 18.549C16.2643 18.2699 16.8544 18.2804 17.3479 18.5412C17.6836 18.7186 17.927 18.8172 18.167 18.8488C18.6929 18.9181 19.2248 18.7756 19.6456 18.4527C19.9612 18.2105 20.1942 17.807 20.6601 16.9999C21.1261 16.1929 21.3591 15.7894 21.411 15.395C21.4802 14.8691 21.3377 14.3372 21.0148 13.9164C20.8674 13.7243 20.6602 13.5628 20.3387 13.3608C19.8662 13.0639 19.5621 12.558 19.5621 11.9999C19.5621 11.4418 19.8662 10.9361 20.3387 10.6392C20.6603 10.4371 20.8675 10.2757 21.0149 10.0835C21.3378 9.66273 21.4803 9.13087 21.4111 8.60497C21.3592 8.21055 21.1262 7.80703 20.6602 7C20.1943 6.19297 19.9613 5.78945 19.6457 5.54727C19.2249 5.22436 18.693 5.08185 18.1671 5.15109C17.9271 5.18269 17.6837 5.28136 17.3479 5.4588C16.8545 5.71959 16.2644 5.73002 15.7811 5.45096C15.2977 5.17191 15.0117 4.65566 14.9909 4.09794C14.9767 3.71848 14.9404 3.45833 14.8477 3.23463C14.6448 2.74458 14.2554 2.35523 13.7654 2.15224Z"
+                      stroke="#d3d3d4" stroke-width="1.5"></path>
+                  </g>
+                </svg>
+                <p class="pl-3">Settings</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="lg:hidden block  " id="mobile-menu">
+          <div *ngIf="!mobileMenu">
+            <aside id="default-sidebar"
+              class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-white"
+              aria-label="Sidebar">
+              <div class="flex-shrink-0 flow-root  p-3">
+                <img class="h-9 w-9 float-left" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Your Company">
+                <button (click)="mobileMenu = !mobileMenu">
+                  <svg class="block h-6 w-6 float-right ml-40 text-white mt-2" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <a routerLink="/admin"
+                class="parent-hover:text-white focus:bg-gray-700 hover:bg-gray-700  block rounded-md  text-base font-medium"
+                role="menuitem" tabindex="-1" id="menu-item-0">
+                <div
+                  class=" flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                  <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V15C22 16.6569 20.6569 18 19 18H13V19H15C15.5523 19 16 19.4477 16 20C16 20.5523 15.5523 21 15 21H9C8.44772 21 8 20.5523 8 20C8 19.4477 8.44772 19 9 19H11V18H5C3.34315 18 2 16.6569 2 15V6ZM5 5C4.44772 5 4 5.44772 4 6V15C4 15.5523 4.44772 16 5 16H19C19.5523 16 20 15.5523 20 15V6C20 5.44772 19.5523 5 19 5H5Z"
+                        fill="#ded9d9"></path>
+                    </g>
+                  </svg>
+  
+                  <p class="pl-3">Dashboard</p>
+  
+                </div>
+              </a>
+              <a routerLink="/client-list"
+                class="parent-hover:text-white focus:bg-gray-700  hover:bg-gray-700  block rounded-md  text-base font-medium"
+                role="menuitem" tabindex="-1" id="menu-item-0">
+                <div class="flex text-gray-400  pl-3 py-3 rounded-md  hover:bg-gray-100 hover:text-black  ">
+                  <svg fill="#b2aeae" width="23px" height="23px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title></title>
+                      <g data-name="Layer 28" id="Layer_28">
+                        <path
+                          d="M28,21H27V7a1,1,0,0,0-1-1H6A1,1,0,0,0,5,7V21H4a1,1,0,0,0-1,1,5,5,0,0,0,5,5H24a5,5,0,0,0,5-5A1,1,0,0,0,28,21ZM7,8H25V21H7ZM24,25H8a3,3,0,0,1-2.83-2H26.83A3,3,0,0,1,24,25Z">
+                        </path>
+                        <path
+                          d="M19,11.79l-4.29,4.3L13,14.29a1,1,0,0,0-1.42,1.42l2.5,2.5a1,1,0,0,0,1.42,0l5-5A1,1,0,0,0,19,11.79Z">
+                        </path>
+                      </g>
+                    </g>
+                  </svg>
+                  <p class="pl-3">Clients</p>
+                </div>
+              </a> <a routerLink="/All-Projects"
+                class="parent-hover:text-white focus:bg-gray-700 hover:bg-gray-700 block rounded-md  text-base font-medium"
+                role="menuitem" tabindex="-1" id="menu-item-0">
+                <div
+                  class=" flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black  hover:bg-gray-100 items-center ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                  </svg>
+                  <p class="pl-3">Projects</p>
+                </div>
+              </a>
+              <a href=""  routerLink="list-tasks"
+                class="hover:bg-gray-700 parent-hover:text-white focus:bg-gray-700 block rounded-md  text-base font-medium">
+                <div
+                  class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black  hover:bg-gray-100 items-center ">
+                  <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Interface / Checkbox_Check">
+                        <path id="Vector"
+                          d="M8 12L11 15L16 9M4 16.8002V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2842 4.21799 18.9079C4 18.4801 4 17.9203 4 16.8002Z"
+                          stroke="#b9b6b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <p class="pl-3">Tasks</p>
+                </div>
+              </a>
+              <a routerLink="/invoice"
+                class="parent-hover:text-white focus:bg-gray-700 hover:bg-gray-700  block rounded-md  text-base font-medium"
+                role="menuitem" tabindex="-1" id="menu-item-0">
+                <div class="flex text-gray-400 pl-3 py-3 rounded-md hover:text-black   hover:bg-gray-100  ">
+                  <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M21.0039 12C21.0039 16.9706 16.9745 21 12.0039 21C9.9675 21 3.00463 21 3.00463 21C3.00463 21 4.56382 17.2561 3.93982 16.0008C3.34076 14.7956 3.00391 13.4372 3.00391 12C3.00391 7.02944 7.03334 3 12.0039 3C16.9745 3 21.0039 7.02944 21.0039 12Z"
+                        stroke="#d7d0d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </svg>
+  
+                  <p class="pl-3">Invoices</p>
+                </div>
+              </a>
+              <a href="" routerLink="/admin/messages"
+                class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+                <div
+                  class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                  <svg fill="#c0b9b9" width="23px" height="23px" viewBox="0 0 1024 1024"
+                    xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M824.2 699.9a301.55 301.55 0 0 0-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 0 0-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 0 0 8 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 0 1 612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 0 0 8-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 0 1-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 0 1 612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 0 1-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 0 0 8 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z">
+                      </path>
+                    </g>
+                  </svg>
+                  <p class="pl-3">Messages</p>
+                </div>
+              </a>
+              <a href="#"
+                class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+                <div
+                  class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                  <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="#a39e9e">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M11 16L15 12M15 12L11 8M15 12H3M4.51555 17C6.13007 19.412 8.87958 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C8.87958 3 6.13007 4.58803 4.51555 7"
+                        stroke="#c1bebe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                  </svg>
+                  <p class="pl-3">Expenses</p>
+                </div>
+              </a>
+              <a href="#"
+                class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+                <div
+                  class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                  <svg width="23px" height="23px" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path fill="#c7c7c7"
+                        d="M192 128v768h640V128H192zm-32-64h704a32 32 0 0132 32v832a32 32 0 01-32 32H160a32 32 0 01-32-32V96a32 32 0 0132-32zm160 448h384v64H320v-64zm0-192h192v64H320v-64zm0 384h384v64H320v-64z">
+                      </path>
+                    </g>
+                  </svg>
+                  <p class="pl-3">Tickets</p>
+                </div>
+              </a>
+  
+              <a href="#"
+                class=" hover:bg-gray-700  focus:bg-gray-700 parent-hover:text-white block rounded-md  text-base font-medium">
+                <div
+                  class="flex text-gray-400 pl-3 py-3 mt-1 rounded-md hover:text-black hover:bg-gray-100 items-center ">
+                  <svg width="23px" height="23px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <circle cx="12" cy="12" r="3" stroke="#d3d3d4" stroke-width="1.5"></circle>
+                      <path
+                        d="M13.7654 2.15224C13.3978 2 12.9319 2 12 2C11.0681 2 10.6022 2 10.2346 2.15224C9.74457 2.35523 9.35522 2.74458 9.15223 3.23463C9.05957 3.45834 9.0233 3.7185 9.00911 4.09799C8.98826 4.65568 8.70226 5.17189 8.21894 5.45093C7.73564 5.72996 7.14559 5.71954 6.65219 5.45876C6.31645 5.2813 6.07301 5.18262 5.83294 5.15102C5.30704 5.08178 4.77518 5.22429 4.35436 5.5472C4.03874 5.78938 3.80577 6.1929 3.33983 6.99993C2.87389 7.80697 2.64092 8.21048 2.58899 8.60491C2.51976 9.1308 2.66227 9.66266 2.98518 10.0835C3.13256 10.2756 3.3397 10.437 3.66119 10.639C4.1338 10.936 4.43789 11.4419 4.43786 12C4.43783 12.5581 4.13375 13.0639 3.66118 13.3608C3.33965 13.5629 3.13248 13.7244 2.98508 13.9165C2.66217 14.3373 2.51966 14.8691 2.5889 15.395C2.64082 15.7894 2.87379 16.193 3.33973 17C3.80568 17.807 4.03865 18.2106 4.35426 18.4527C4.77508 18.7756 5.30694 18.9181 5.83284 18.8489C6.07289 18.8173 6.31632 18.7186 6.65204 18.5412C7.14547 18.2804 7.73556 18.27 8.2189 18.549C8.70224 18.8281 8.98826 19.3443 9.00911 19.9021C9.02331 20.2815 9.05957 20.5417 9.15223 20.7654C9.35522 21.2554 9.74457 21.6448 10.2346 21.8478C10.6022 22 11.0681 22 12 22C12.9319 22 13.3978 22 13.7654 21.8478C14.2554 21.6448 14.6448 21.2554 14.8477 20.7654C14.9404 20.5417 14.9767 20.2815 14.9909 19.902C15.0117 19.3443 15.2977 18.8281 15.781 18.549C16.2643 18.2699 16.8544 18.2804 17.3479 18.5412C17.6836 18.7186 17.927 18.8172 18.167 18.8488C18.6929 18.9181 19.2248 18.7756 19.6456 18.4527C19.9612 18.2105 20.1942 17.807 20.6601 16.9999C21.1261 16.1929 21.3591 15.7894 21.411 15.395C21.4802 14.8691 21.3377 14.3372 21.0148 13.9164C20.8674 13.7243 20.6602 13.5628 20.3387 13.3608C19.8662 13.0639 19.5621 12.558 19.5621 11.9999C19.5621 11.4418 19.8662 10.9361 20.3387 10.6392C20.6603 10.4371 20.8675 10.2757 21.0149 10.0835C21.3378 9.66273 21.4803 9.13087 21.4111 8.60497C21.3592 8.21055 21.1262 7.80703 20.6602 7C20.1943 6.19297 19.9613 5.78945 19.6457 5.54727C19.2249 5.22436 18.693 5.08185 18.1671 5.15109C17.9271 5.18269 17.6837 5.28136 17.3479 5.4588C16.8545 5.71959 16.2644 5.73002 15.7811 5.45096C15.2977 5.17191 15.0117 4.65566 14.9909 4.09794C14.9767 3.71848 14.9404 3.45833 14.8477 3.23463C14.6448 2.74458 14.2554 2.35523 13.7654 2.15224Z"
+                        stroke="#d3d3d4" stroke-width="1.5"></path>
+                    </g>
+                  </svg>
+                  <p class="pl-3">Settings</p>
+                </div>
+              </a>
+  
+  
+            </aside>
+          </div>
+        </div>
+        <div class=" w-full md:w-screen sm:w-screen overflow-hidden lg:w-4/5  ">
+          <div id="bar"
+              class="flex items-center shadow-sm bg-white py-2 sm:flow-root md:flow-root lg:flow-root flow-root overflow-hidden">
+              <div class="sm:float-left lg:float-left float-left md:float-left flex">
+                <button (click)="mobileMenu = !mobileMenu">
+                  <div id="pop" class="px-5 text-gray-400 lg:hidden  border-r">
+                    <svg xmlns="http://www.w3.org/2000/svg" *ngIf="mobileMenu" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                  </div>
+                </button>
+                <div class=" lg:pl-10 sm:pl-10 pl-2 py-3">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+                </div>
+                <input type="text" name="price" id="price"
+                  class="block focus:outline-0 w-1/5 sm:w-1/2  lg:w-2/3 rounded-md border-0  py-1.5 pl-7 pr-20 "
+                  placeholder="Search here...">
+              </div>
+            
+              <div class="lg:float-right md:float-right sm:float-right float-right  flex  mt-2 lg:mr-9 sm:mr-9 mr-0  ">
+                 <button type="button" class="relative text-gray-400 hover:text-gray-500 border-gray-200 pr-4 border-r  ">
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">View notifications</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                  </svg>
+                </button>
+               
+                <div id="open" class="sm:ml-6 ml-1 lg:ml-6 flex  ">
+                  <div class="">
+                    <button type="button"
+                      class="relative flex max-w-xs rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                      <span class="absolute -inset-1.5"></span>
+                      <span class="sr-only">Open user menu</span>
+                      <img class="h-8 w-8 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="">
+                    </button>
+                  </div>
+                  <p
+                    class="xxs:max-xs:p-5 lg:py-0 hidden lg:block  text-md font-medium  cursor-pointer hidden lg:block mt-1 ml-2">
+                    Tom cook</p>
+                  <button class="text-gray-400 hidden lg:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+          <article class="lg:p-7 sm:p-5 p-5   min-h-screen   ">
+            <div
+              class="content border-gray-200 bg-white rounded-md  relative shadow-sm dark:bg-gray-800 dark:border-gray-700 p-3 sm:p-3 lg:p-3  w-full">
+              <div class="flex flex-row max-w-full sm:w-full  lg:w-full p-0  sm:p-0 lg:p-0  lg:pb-4 sm:pb-4 pb-4">
+              <div class="overflow-auto ">
+              
+<div class="messages-container">
+    <div class="messages-sidebar">
+      <ul>
+        <li><a routerLink="admin/compose" routerLinkActive="active-link">Compose</a></li>
+        <li><a routerLink="admin/inbox" routerLinkActive="active-link">Inbox</a></li>
+        <li><a routerLink="admin/sent" routerLinkActive="active-link">Sent Items</a></li>
+      </ul>
+    </div>
+    <div class="messages-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+              </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+
+
+
+
+

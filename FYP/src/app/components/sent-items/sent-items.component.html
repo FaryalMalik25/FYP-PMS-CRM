@@ -1,0 +1,15 @@
+<div class="sent-items">
+    <h2>Sent Items</h2>
+    <div *ngIf="messages.length > 0; else noMessages">
+      <div *ngFor="let message of messages" class="message">
+        <h3>{{ message.subject }}</h3>
+        <p><strong>To:</strong> {{ getUserName(message.to) }}</p>
+        <p>{{ message.body }}</p>
+        <small>{{ message.timestamp | date:'short' }}</small>
+      </div>
+    </div>
+    <ng-template #noMessages>
+      <p>No sent messages.</p>
+    </ng-template>
+  </div>
+  

@@ -1,0 +1,228 @@
+<!-- 
+
+
+<div class="container mt-9 mx-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0">
+        <h2 class="pl-4 py-2"> Add Payments</h2>
+        <div align="end" class="mb-10">
+          <button type="button"
+          class="text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none font-medium rounded-lg text-sm text-center dark:focus:ring-black mr-2"
+          (click)="closeDialog()">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+            stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div>
+        <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" class="payment-form">
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="invoiceId" class="block text-sm font-medium leading-6 text-gray-900">Invoice:</label>
+              <select formControlName="invoiceId"
+                class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option *ngFor="let invoice of invoices" [value]="invoice._id">
+                  {{ invoice.displayId || 'INV #' + invoice._id }}
+                </option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="paymentMethod" class="block text-sm font-medium leading-6 text-gray-900">Payment Method:</label>
+              <select formControlName="paymentMethod"
+                class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="">Select a method</option>
+                <option value="Cash">Cash</option>
+                <option value="Debit Card">Debit Card</option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="paymentDate" class="block text-sm font-medium leading-6 text-gray-900">Payment Date:</label>
+              <input type="date" formControlName="paymentDate"
+                class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+          </div>
+        
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="amount" class="block text-sm font-medium leading-6 text-gray-900">Amount:</label>
+              <input type="number" formControlName="amount"
+                [placeholder]="dueAmount ? 'Due: ' + dueAmount : 'Enter amount'"
+                class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+          </div>
+        
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label class="block text-sm font-medium leading-6 text-gray-900">Total Invoiced: {{ totalInvoiced }}</label>
+            </div>
+          </div>
+        
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label class="block text-sm font-medium leading-6 text-gray-900">Due Amount: {{ dueAmount }}</label>
+            </div>
+          </div>
+        
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="w-full pr-7">
+              <label for="note" class="block text-sm font-medium leading-6 text-gray-900">Note:</label>
+              <textarea formControlName="note"
+                class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            </div>
+          </div>
+        
+          <button type="submit" [disabled]="!paymentForm.valid"
+            class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded">Submit Payment</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="invoiceId">Invoice:</label>
+      <select formControlName="invoiceId">
+        <option *ngFor="let invoice of invoices" [value]="invoice._id">
+          {{ invoice.displayId || 'INV #' + invoice._id }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+        <label for="paymentMethod">Payment Method:</label>
+        <select formControlName="paymentMethod">
+          <option value="">Select a method</option>
+          <option value="Cash">Cash</option>
+          <option value="Debit Card">Debit Card</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="paymentDate">Payment Date:</label>
+        <input type="date" formControlName="paymentDate">
+      </div>
+    
+      <div>
+        <label for="amount">Amount:</label>
+        <input type="number" formControlName="amount" [placeholder]="dueAmount ? 'Due: ' + dueAmount : 'Enter amount'">
+      </div>
+      
+      <div>
+        <label>Total Invoiced: {{ totalInvoiced }}</label>
+      </div>
+      <div>
+        <label>Due Amount: {{ dueAmount }}</label>
+      </div>
+
+      <div>
+        <label for="note">Note:</label>
+        <textarea formControlName="note"></textarea>
+      </div>
+      <div>
+        <button type="submit" [disabled]="!paymentForm.valid">Submit Payment</button>
+      </div>
+  </form> -->
+
+
+  <div class="container mt-9 mx-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0">
+          <h2 class="pl-4 py-2"> Add Payments</h2>
+          <div align="end" class="mb-10">
+            <button type="button"
+            class="text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none font-medium rounded-lg text-sm text-center dark:focus:ring-black mr-2"
+            (click)="closeDialog()">
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+              stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          </div>
+        </div>
+        <div>
+          <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+  
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label for="invoiceId" class="block text-sm font-medium leading-6 text-gray-900">Invoice:</label>
+                <select formControlName="invoiceId"
+                  class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option *ngFor="let invoice of invoices" [value]="invoice._id">
+                    {{ invoice.displayId || 'INV #' + invoice._id }}
+                  </option>
+                </select>
+              </div>
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label for="paymentMethod" class="block text-sm font-medium leading-6 text-gray-900">Payment
+                  Method:</label>
+                <select formControlName="paymentMethod"
+                  class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option value="">Select a method</option>
+                  <option value="Cash">Cash</option>
+                  <option value="Debit Card">Debit Card</option>
+                </select>
+              </div>
+            </div>
+  
+  
+  
+           
+  
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label for="paymentDate" class="block text-sm font-medium leading-6 text-gray-900">Payment Date:</label>
+                <input type="date" formControlName="paymentDate"
+                  class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </div>
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label for="amount" class="block text-sm font-medium leading-6 text-gray-900">Amount:</label>
+                <input type="number" formControlName="amount"
+                  [placeholder]="dueAmount ? 'Due: ' + dueAmount : 'Enter amount'"
+                  class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </div>
+            </div>
+  
+           
+  
+  
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label class="block text-sm font-medium leading-6 text-gray-900">Total Invoiced: {{ totalInvoiced
+                  }}</label>
+  
+              </div>
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label class="block text-sm font-medium leading-6 text-gray-900">Due Amount: {{ dueAmount }}</label>
+              </div>
+            
+            </div>
+  
+  
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="w-full pr-7">
+                <label for="note" class="block text-sm font-medium leading-6 text-gray-900">Note:</label>
+                <textarea formControlName="note"
+                  class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+              </div>
+            </div>
+  
+            <button type="submit" [disabled]="!paymentForm.valid"
+              class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded">Submit
+              Payment</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

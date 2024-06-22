@@ -1,0 +1,16 @@
+<div class="compose-message">
+    <h2>Compose Message</h2>
+    <form (submit)="sendMessage()">
+      <label for="to">To:</label>
+      <select id="to" [(ngModel)]="message.to" name="to">
+        <option *ngFor="let recipient of recipients" [value]="recipient._id">{{ recipient.fname }} {{ recipient.lname }}</option>
+      </select>
+      <label for="subject">Subject:</label>
+      <input id="subject" [(ngModel)]="message.subject" name="subject" type="text" />
+      <label for="body">Message:</label>
+      <textarea id="body" [(ngModel)]="message.body" name="body"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+  

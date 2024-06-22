@@ -1,0 +1,115 @@
+<!-- 
+<div class="login  xl:h-[650px] ">
+  <div class="login1">
+<div class="full flex min-h-full   justify-center px-6 pt-16 lg:px-8 ">
+  <div class="bg-white rounded lg:w-1/3 w-auto  ">
+
+
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm py-3 ">
+   
+    <h2 class=" text-center text-2xl  leading-9 tracking-tight text-gray-900">Sign in</h2>
+  </div>
+<hr class="w-full">
+
+
+  <div class=" xl:ml-5 mt-7 px-6 sm:w-full sm:max-w-sm ">
+    <p class="text-center" [ngClass]="isAccountCreated ? 'text-green-100 pb-1' :'text-green-100 pb-1'">{{displaymsg}}</p>
+    <form [formGroup]="signinForm"  class="space-y-4" action="#" method="POST">
+      <div>
+        <div class="mt-2 ">
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="email"  formControlName="email" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm  placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+          <span style="color: red;" *ngIf="signinFormControl.email.errors?.['required'] &&  (signinFormControl.email.touched || signinFormControl.email.dirty)">please enter Email</span>
+          <span style="color: red;" *ngIf="signinFormControl.email.errors?.['email'] && (signinFormControl.email.touched || signinFormControl.email.dirty)">please enter valid Email</span>
+      </div>
+      </div>
+
+      <div>
+        
+        <div class="mt-2">
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="password" required formControlName="password" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm  placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+          <span style="color: red;" *ngIf="signinFormControl.password.errors?.['required'] && (signinFormControl.password.touched || signinFormControl.password.dirty)">please enter password</span>
+    
+          <span style="color: red;" *ngIf="signinFormControl.password.errors?.['minLength'] || signinFormControl.password.errors?.['maxLength'] && (signinFormControl.password.touched || signinFormControl.password.dirty)">Password should be atleast 6 characters and atmost 12</span>
+      </div>
+    </div>
+
+      <div>
+        <button type="submit" [disabled]="signinForm.invalid" class="flex w-full justify-center mb-12 rounded-md bg-indigo-400 px-3 py-2 text-sm  leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" (click)="onSubmit()">Sign in</button>
+      </div>
+     
+    </form>
+
+  </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+ -->
+
+ 
+<div class="login  xl:h-[650px] ">
+  <div class="login1">
+<div class="full flex min-h-full   justify-center px-6 pt-16 lg:px-8 ">
+  <div class="bg-white rounded lg:w-1/3 w-auto  ">
+
+
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm py-3 ">
+   
+    <h2 class=" text-center text-2xl  leading-9 tracking-tight text-gray-900">Log In </h2>
+  </div>
+<hr class="w-full">
+
+
+  <div class=" xl:ml-5 mt-7 px-6 sm:w-full sm:max-w-sm ">
+    <div class=" xl:ml-5 mt-7 px-6 sm:w-full sm:max-w-sm ">
+ 
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading; else loading">
+
+  <div class="mt-2">
+    <div class="form-group " >
+      <label for="email">Email:</label>
+      <input type="email" id="email"  name="email"formControlName="email" placeholder="Email" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm  placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50" required >
+      <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="error">
+        {{ getErrorMessage('email') }}
+      </div>
+    </div>
+    </div>
+  
+    <div class="mt-2">
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password"  formControlName="password"  placeholder="Password"  class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm  placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50"     required>
+      <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="error">
+        {{ getErrorMessage('password') }}
+      </div>
+    </div>
+    </div>
+    <div >
+    <button type="submit" [disabled]="isLoading" class="flex w-full justify-center mb-12 rounded-md bg-indigo-400 px-3 py-2 text-sm  leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</button>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    </div>
+  </form>
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
+  <p>You don't have an Account? <a class="text-blue-700" routerLink="/sign-up">Sign up</a></p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+

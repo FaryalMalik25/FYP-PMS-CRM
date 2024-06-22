@@ -1,0 +1,190 @@
+
+<!-- 
+<div class="container mt-4 mx-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0">
+        <h2 class="pl-4 py-2">Add Invoice</h2>
+        <div align="end" class="mb-10">
+          <button type="button"
+          class="text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none font-medium rounded-lg text-sm text-center dark:focus:ring-black mr-2"
+          (click)="closeDialog()">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+            stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div >
+        <form #invoiceForm="ngForm" (ngSubmit)="onSubmit(invoiceForm)">
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="billDate" class="block text-sm font-medium leading-6 text-gray-900">Bill Date:</label>
+              <input type="date" name="billDate" id="billDate" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel required>
+            </div>
+          </div>
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="dueDate" class="block text-sm font-medium leading-6 text-gray-900">Due Date:</label>
+              <input type="date" id="dueDate" name="dueDate" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel required>
+            </div>
+          </div>
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="client" class="block text-sm font-medium leading-6 text-gray-900">Client:</label>
+              <select id="client" name="client" [(ngModel)]="selectedClient" (ngModelChange)="onClientSelect($event)" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option *ngFor="let client of clients" [ngValue]="client">{{ client.name }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="w-full pr-7">
+              <label for="project" class="block text-sm font-medium leading-6 text-gray-900">Projects:</label>
+              <select id="project" name="project" [(ngModel)]="selectedProject" required [disabled]="!projects.length" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option *ngFor="let project of projects" [ngValue]="project">{{ project.projectName }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="totalInvoiced" class="block text-sm font-medium leading-6 text-gray-900">Total Invoiced:</label>
+              <input type="number" id="totalInvoiced" name="totalInvoiced" [(ngModel)]="totalInvoiced" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+          </div>
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="w-full pr-7">
+              <label for="note" class="block text-sm font-medium leading-6 text-gray-900">Note:</label>
+              <textarea id="note" name="note" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel></textarea>
+            </div>
+          </div>
+          <button type="submit" class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded">Save</button>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- 
+<h2>Add Invoice</h2>
+<form #invoiceForm="ngForm" (ngSubmit)="onSubmit(invoiceForm)">
+  
+  <div class="form-group">
+    <label for="billDate">Bill Date:</label>
+    <input type="date" id="billDate" name="billDate" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" name="dueDate" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label for="client">Client:</label>
+    <select id="client" name="client" [(ngModel)]="selectedClient" (ngModelChange)="onClientSelect($event)" required>
+      <option *ngFor="let client of clients" [ngValue]="client">{{ client.name }}</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="project">Projects:</label>
+    <select id="project" name="project" [(ngModel)]="selectedProject" required [disabled]="!projects.length">
+      <option *ngFor="let project of projects" [ngValue]="project">{{ project.projectName }}</option>
+    </select>
+  </div>
+  
+
+    
+  <div class="form-group">
+    <label for="totalInvoiced">Total Invoiced:</label>
+    <input type="number" id="totalInvoiced" name="totalInvoiced" [(ngModel)]="totalInvoiced" required>
+
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="note">Note:</label>
+    <textarea id="note" name="note" ngModel></textarea>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form> -->
+
+
+
+
+
+
+
+
+<div class="container mt-4 mx-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0">
+        <h2 class="pl-4 py-2">Add Invoice</h2>
+        <div align="end" class="mb-10">
+          <button type="button"
+          class="text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none font-medium rounded-lg text-sm text-center dark:focus:ring-black mr-2"
+          (click)="closeDialog()">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+            stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div >
+        <form #invoiceForm="ngForm" (ngSubmit)="onSubmit(invoiceForm)">
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 ">
+              <label for="client" class="block text-sm font-medium leading-6 text-gray-900">Client:</label>
+              <select id="client" name="client" [(ngModel)]="selectedClient" (ngModelChange)="onClientSelect($event)" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option *ngFor="let client of clients" [ngValue]="client">{{ client.name }}</option>
+              </select>
+            </div>
+            <div class="sm:col-span-3 w-1/2 ">
+              <label for="project" class="block text-sm font-medium leading-6 text-gray-900">Projects:</label>
+              <select id="project" name="project" [(ngModel)]="selectedProject" required [disabled]="!projects.length" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option *ngFor="let project of projects" [ngValue]="project">{{ project.projectName }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="billDate" class="block text-sm font-medium leading-6 text-gray-900">Bill Date:</label>
+              <input type="date" name="billDate" id="billDate" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel required>
+            </div>
+            <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="dueDate" class="block text-sm font-medium leading-6 text-gray-900">Due Date:</label>
+              <input type="date" id="dueDate" name="dueDate" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel required>
+            </div>
+          </div>
+          
+         
+         
+          <div class="form-group flex mb-3 items-stretch">
+            <div class=" w-full pr-7">
+              <label for="totalInvoiced" class="block text-sm font-medium leading-6 text-gray-900">Total Invoiced:</label>
+              <input type="number" id="totalInvoiced" name="totalInvoiced" [(ngModel)]="totalInvoiced" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+          </div>
+         
+          <div class="form-group flex mb-3 items-stretch">
+            <div class="w-full pr-7">
+              <label for="note" class="block text-sm font-medium leading-6 text-gray-900">Note:</label>
+              <textarea id="note" name="note" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel></textarea>
+            </div>
+          </div>
+          <button type="submit" class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded">Save</button>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,147 @@
+<!-- <div class="container">
+    <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+      <h2>Edit Invoice</h2>
+      <div formGroupName="project">
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" formControlName="projectName" class="form-control">
+      </div> -->
+      
+      <!-- Client Name Inputs inside another nested group -->
+      <!-- <div formGroupName="client">
+        <label for="fname"> First Name:</label>
+        <input type="text" id="fname" formControlName="fname" class="form-control">
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" formControlName="lname" class="form-control">
+      </div> -->
+  
+      <!-- Bill Date Input -->
+      <!-- <div class="form-group">
+        <label for="billDate">Bill Date:</label>
+        <input type="medium-date" id="billDate" formControlName="billDate" class="form-control">
+      </div> -->
+  
+      <!-- Due Date Input -->
+      <!-- <div class="form-group">
+        <label for="dueDate">Due Date:</label>
+        <input type="medium-date" id="dueDate" formControlName="dueDate" class="form-control">
+      </div> -->
+  
+      <!-- Total Invoiced Input -->
+      <!-- <div class="form-group">
+        <label for="totalInvoiced">Total Invoiced:</label>
+        <input type="number" id="totalInvoiced" formControlName="totalInvoiced" class="form-control">
+      </div> -->
+  
+      <!-- Payment Received Input -->
+      <!-- <div class="form-group">
+        <label for="paymentReceived">Payment Received:</label>
+        <input type="number" id="paymentReceived" formControlName="paymentReceived" class="form-control">
+      </div> -->
+  
+      <!-- Due Input -->
+      <!-- <div class="form-group">
+        <label for="due">Amount Due:</label>
+        <input type="number" id="due" formControlName="due" class="form-control">
+      </div>
+   -->
+      <!-- Note Textarea -->
+      <!-- <div class="form-group">
+        <label for="note">Note:</label>
+        <textarea id="note" formControlName="note" class="form-control" rows="3"></textarea>
+      </div> -->
+  
+      <!-- Submit Button -->
+      <!-- <button type="submit" class="btn btn-primary" [disabled]="!invoiceForm.valid">Update Invoice</button>
+     
+    </form>
+  </div> -->
+  
+
+
+
+
+  <div class="container mt-4 mx-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0">
+          <h2 class="pl-4 py-2">Edit Invoice</h2>
+          <div align="end" class="mb-10">
+            <button type="button" class="text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none font-medium rounded-lg text-sm text-center dark:focus:ring-black mr-2" >
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div >
+          <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7" formGroupName="project">
+                <label for="projectName" class="block text-sm font-medium leading-6 text-gray-900">Project Name:</label>
+                <input type="text"  id="projectName"  formControlName="projectName"  class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+              </div>
+            </div>
+
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7"  formGroupName="client">
+                <label for="fname" class="block text-sm font-medium leading-6 text-gray-900">First Name:</label>
+                <input type="text"  id="fname"  formControlName="fname"class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+                <label for="lname" class="block text-sm font-medium leading-6 text-gray-900">Last Name:</label>
+                <input type="text"  id="lname"  formControlName="lname" class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </div>
+            </div>
+
+
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7" >
+                <label for="billDate" class="block text-sm font-medium leading-6 text-gray-900">Bill Date:</label>
+                <input type="medium-date"  id="billDate" formControlName="billDate"  class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+              </div>
+            </div>
+
+           
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7" >
+                <label for="dueDate" class="block text-sm font-medium leading-6 text-gray-900">Due Date:</label>
+                <input type="medium-date"  id="dueDate" formControlName="dueDate"  class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+              </div>
+            </div>
+
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7" >
+                <label for="totalInvoiced" class="block text-sm font-medium leading-6 text-gray-900">Total Invoiced:</label>
+                <input type="number"  id="totalInvoiced" formControlName="totalInvoiced"  class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+              </div>
+            </div>
+
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7" >
+                <label for="paymentReceived" class="block text-sm font-medium leading-6 text-gray-900">Payment Received:</label>
+                <input type="number"   id="paymentReceived" formControlName="paymentReceived"  class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+              </div>
+            </div>
+            
+           
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7" >
+                <label for="due" class="block text-sm font-medium leading-6 text-gray-900">Amount Due:</label>
+                <input type="number"  id="due" formControlName="due"  class=" form-control border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+              </div>
+            </div>
+  
+           
+
+            <div class="form-group flex mb-3 items-stretch">
+              <div class="w-full pr-7">
+                <label for="note" class="block text-sm font-medium leading-6 text-gray-900">Note:</label>
+                <textarea id="note" formControlName="note" class="border border-gray-300 w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ngModel></textarea>
+              </div>
+            </div>
+            <button type="submit" class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded" [disabled]="!invoiceForm.valid">Update Invoice</button>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

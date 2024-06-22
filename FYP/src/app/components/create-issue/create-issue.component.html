@@ -1,0 +1,92 @@
+<!-- create-issue.component.html -->
+<div class="create-issue-container">
+    <h2>Create Issue</h2>
+    <form (ngSubmit)="createIssue()">
+      <div class="form-group">
+        <label for="projectName">Project Name</label>
+        <select
+          id="projectName"
+          [(ngModel)]="issue.projectName"
+          name="projectName"
+          class="form-control"
+          required
+        >
+          <option value="" disabled>Select project</option>
+          <option *ngFor="let project of projects" [value]="project.title">{{ project.title }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="issueType">Issue Type</label>
+        <input
+          type="text"
+          id="issueType"
+          [(ngModel)]="issue.issueType"
+          name="issueType"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="summary">Summary</label>
+        <input
+          type="text"
+          id="summary"
+          [(ngModel)]="issue.summary"
+          name="summary"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          [(ngModel)]="issue.description"
+          name="description"
+          class="form-control"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="priority">Priority</label>
+        <select
+          id="priority"
+          [(ngModel)]="issue.priority"
+          name="priority"
+          class="form-control"
+          required
+        >
+          <option value="" disabled>Select priority</option>
+          <option value="Highest">Highest</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+          <option value="Lowest">Lowest</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input
+          type="date"
+          id="dueDate"
+          [(ngModel)]="issue.dueDate"
+          name="dueDate"
+          class="form-control"
+          required
+        />
+      </div>
+
+   
+
+      <div class="form-group">
+        <label for="createAnother">Create another issue</label>
+        <input
+          type="checkbox"
+          id="createAnother"
+          [(ngModel)]="createAnother"
+          name="createAnother"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Create Issue</button>
+    </form>
+  </div>
+  

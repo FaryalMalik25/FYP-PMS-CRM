@@ -1,0 +1,116 @@
+/* project-list.component.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .search-container {
+    margin-bottom: 1rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  
+  /* project-list.component.css */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .progress-bar {
+    background-color: #81d5e6f5;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    height: 1.5rem;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #d8cf15;
+    color: rgba(255, 255, 255, 0.889);
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.5rem;
+  }
+  
+  .search-container {
+    margin-bottom: 1rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .action-buttons .view {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .action-buttons .edit {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .action-buttons .delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .action-buttons button:hover {
+    opacity: 0.8;
+  }
+  

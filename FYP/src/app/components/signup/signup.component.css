@@ -1,0 +1,45 @@
+.full{
+    font-family:monospace,Arial;
+    position: relative;
+}
+.login{
+   
+    background-image: url("../../../assets/images/fyp_img1.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    position: relative;
+    overflow-y: scroll;
+   
+    
+    height: 100vh;
+    
+}
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;  /* Adjust size as necessary */
+  }
+  
+  
+  .loading-spinner::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,98 @@
+
+<div class="login xl:h-[650px]">
+  <div class="login1">
+    <div class="full flex min-h-full justify-center px-6 pt-16 lg:px-8">
+      <div class="bg-white rounded lg:w-1/3 w-auto">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm py-3">
+          <h2 class="text-center text-2xl leading-9 tracking-tight text-gray-900">Sign up</h2>
+        </div>
+        <hr class="w-full">
+        <div class="xl:ml-5 mt-7 px-6 sm:w-full sm:max-w-sm">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-4">
+            
+            <!-- First Name Field -->
+            <div class="mt-2">
+              <input id="fname" name="fname" placeholder="First Name" type="text" formControlName="fname"
+                aria-describedby="fname-error"
+                class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+              <div *ngIf="signupForm.get('fname')?.touched &&signupForm.get('fname')?.errors"
+                class="text-red-500 text-sm mt-1" id="fname-error" aria-live="polite">
+                {{ getErrorMessage('fname') }}
+              </div>
+            </div>
+            <!-- Last Name Field -->
+            <div class="mt-2">
+              <input id="lname" name="lname" placeholder="Last Name" type="text" formControlName="lname"
+                aria-describedby="lname-error"
+                class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+              <div *ngIf="signupForm.get('lname')?.touched && signupForm.get('lname')?.errors"
+                class="text-red-500 text-sm mt-1" id="lname-error" aria-live="polite">
+                {{ getErrorMessage('lname') }}
+              </div>
+            </div>
+            <!-- Email Field -->
+            <div class="mt-2">
+              <input id="email" name="email" type="email" placeholder="Email" formControlName="email"
+                aria-describedby="email-error"
+                class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+              <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.errors"
+                class="text-red-500 text-sm mt-1" id="email-error" aria-live="polite">
+                {{ getErrorMessage('email') }}
+              </div>
+              <div *ngIf="emailAlreadyExists" class="text-red-500 text-sm mt-1">
+                Email already exists.
+              </div>
+            </div>
+            <!-- Password Field -->
+            <div class="mt-2">
+              <input id="password" name="password" type="password" placeholder="Password" formControlName="password"
+                aria-describedby="password-error"
+                class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+              <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.errors"
+                class="text-red-500 text-sm mt-1" id="password-error" aria-live="polite">
+                {{ getErrorMessage('password') }}
+              </div>
+            </div>
+            <!-- Role Selection Field -->
+            <div class="mt-2">
+              <label for="role">Signup As
+                <select id="role" formControlName="role" aria-describedby="role-error"
+                  class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-0 focus:border-0 focus:bg-gray-200 sm:text-sm sm:leading-6 bg-gray-50">
+                  <option value="">--Select Role--</option>
+                  <option value="admin">Admin</option>
+                  <option value="client">Client</option>
+                </select>
+              </label>
+              <div *ngIf="signupForm.get('role')?.touched && signupForm.get('role')?.errors"
+                class="text-red-500 text-sm mt-1" id="role-error" aria-live="polite">
+                {{ getErrorMessage('role') }}
+              </div>
+            </div>
+            <div *ngIf="errorMessage" class="text-red-500 text-sm mt-1">
+              {{ errorMessage }}
+            </div>
+            <!-- Submit Button -->
+            <div>
+              <!-- <button type="submit" [disabled]="!signupForm.valid"
+                class="flex w-full mb-8 justify-center rounded-md bg-indigo-400 px-3 py-2 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Signup</button> -->
+                <div *ngIf="isLoading" class="loading-spinner">
+                  Loading...
+                </div>
+                <button type="submit" [disabled]="signupForm.pristine"
+                class="flex w-full mb-8 justify-center rounded-md bg-indigo-400 px-3 py-2 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Signup
+              </button>
+            <p  routerLink="/login"
+              class="flex w-full mb-8 justify-center rounded-md bg-indigo-400 px-3 py-2 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+               Login
+               </p>
+            
+              
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

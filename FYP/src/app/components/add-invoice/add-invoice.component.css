@@ -1,0 +1,6 @@
+select {
+    width: 75%; /* Adjust based on your layout needs */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

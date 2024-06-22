@@ -1,0 +1,157 @@
+<!-- 
+     <div class="container mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0 ">
+      <h2 class="pl-4 py-2" >Create Project</h2>
+        <div  align="end" class="mb-10">
+        
+          <button type="button" class=" text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none  font-medium rounded-lg text-sm  text-center  dark:focus:ring-black mr-2  " [mat-dialog-close]="true" >
+            <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+           
+          </button>
+        </div>
+        </div>
+          <div mat-dialog-content>
+            
+          <form [formGroup]="formValue"  (ngSubmit)="addProjects()">
+           
+            
+            <div class=" flex mb-3 items-stretch ">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="projectName" class="block text-sm font-medium leading-6 text-gray-900">Project Title:</label>
+              <input type="text" formControlName="projectName" id="projectName" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+            
+              
+    </div>
+            <div class=" flex mb-3 items-stretch ">
+              <div class="w-full pr-7">
+              <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Description:</label>
+              <textarea formControlName="description" id="description" class="block p-2.5 w-full text-sm text-gray-900  rounded-lg border border-gray-300  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></textarea>
+            </div>
+    </div>
+    <div class="sm:col-span-3 w-1/2 pr-7">
+      <label for="issueType" class="block text-sm font-medium leading-6 text-gray-900">Issue Type:</label>
+      <input type="text" formControlName="issueType" id="issueType" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+    </div>
+          
+            <div class=" flex mb-3 items-stretch ">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="summary" class="block text-sm font-medium leading-6 text-gray-900">Summary:</label>
+              <input type="text" formControlName="summary" id="summary" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+            
+              <div class="sm:col-span-3 w-1/2 pr-7">
+      <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Price:</label>
+      <input type="number" formControlName="price" id="price" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+       </div>
+    </div>
+    
+            <div class=" flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="priority" class="block text-sm font-medium leading-6 text-gray-900">Priority:</label>
+              <select formControlName="priority" id="priority" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option value="Highest">Highest</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+                <option value="Lowest">Lowest</option>
+              </select>
+            </div>
+    
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="dueDate" class="block text-sm font-medium leading-6 text-gray-900">Due Date:</label>
+              <input type="date" formControlName="dueDate" id="dueDate" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+            </div>
+            <button type="submit" class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded" >Create Project</button>
+            <button  class="bg-neutral-50 hover:bg-gray-100 text-neutral-800 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded" [mat-dialog-close]="true">
+              Cancel
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="grid grid-cols-2 border-b border-gray-300 h-14 pt-0 ">
+      <h2 class="pl-4 py-2" >Create Project</h2>
+        <div  align="end" class="mb-10">
+        
+          <button type="button" class=" text-neutral-800 px-3 py-3 hover:bg-gray-100 hover:border-1 focus:outline-none  font-medium rounded-lg text-sm  text-center  dark:focus:ring-black mr-2  " [mat-dialog-close]="true" >
+            <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+           
+          </button>
+        </div>
+        </div>
+          <div mat-dialog-content>
+            
+          <form [formGroup]="formValue"  (ngSubmit)="addProjects()">
+            <div class=" flex mb-3 items-stretch ">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label for="projectName" class="block text-sm font-medium leading-6 text-gray-900">Project Title:</label>
+                <input type="text" formControlName="projectName" id="projectName" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+             </div>
+            
+              <div class="sm:col-span-3 w-1/2 pr-7">
+                <label for="issueType" class="block text-sm font-medium leading-6 text-gray-900">Issue Type:</label>
+                <input type="text" formControlName="issueType" id="issueType" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+               </div>
+    </div>
+            
+        
+            <div class=" flex mb-3 items-stretch ">
+              <div class="w-full pr-7">
+              <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Description:</label>
+              <textarea formControlName="description" id="description" class="block p-2.5 w-full text-sm text-gray-900  rounded-lg border border-gray-300  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></textarea>
+            </div>
+    </div>
+   
+          
+            <div class=" flex mb-3 items-stretch ">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="summary" class="block text-sm font-medium leading-6 text-gray-900">Summary:</label>
+              <input type="text" formControlName="summary" id="summary" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+            
+              <div class="sm:col-span-3 w-1/2 pr-7">
+      <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Price:</label>
+      <input type="number" formControlName="price" id="price" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+       </div>
+    </div>
+    
+            <div class=" flex mb-3 items-stretch">
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="priority" class="block text-sm font-medium leading-6 text-gray-900">Priority:</label>
+              <select formControlName="priority" id="priority" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option value="Highest">Highest</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+                <option value="Lowest">Lowest</option>
+              </select>
+            </div>
+    
+              <div class="sm:col-span-3 w-1/2 pr-7">
+              <label for="dueDate" class="block text-sm font-medium leading-6 text-gray-900">Due Date:</label>
+              <input type="date" formControlName="dueDate" id="dueDate" class="border border-gray-300  w-full pr-16 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+            </div>
+            <button type="submit" class="bg-black hover:bg-gray-100 text-neutral-100 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded" >Create Project</button>
+            <button  class="bg-neutral-50 hover:bg-gray-100 text-neutral-800 font-semibold hover:text-gray-700 py-2.5 mr-2 px-4 border border-grey hover:border-transparent rounded" [mat-dialog-close]="true">
+              Cancel
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>

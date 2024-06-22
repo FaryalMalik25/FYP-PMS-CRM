@@ -1,0 +1,88 @@
+.full{
+  font-family:monospace,Arial;
+  position: relative;
+}
+.login{
+  background-image: url("https://dynamics.folio3.com/blog/wp-content/uploads/2022/08/Best-IT-Project-Management-Software-Tools-2022.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    position: relative;
+    overflow-y: scroll;
+    height: 100vh;
+ 
+ }
+ ::placeholder {
+  color: rgba(72, 63, 63, 0.581);
+  opacity: 1;
+}
+
+.login-container {
+    width: 100px;
+    height: 20px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+  }
+  
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8em;
+  }
+
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+   }
+  
+   loading-spinner::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  } 

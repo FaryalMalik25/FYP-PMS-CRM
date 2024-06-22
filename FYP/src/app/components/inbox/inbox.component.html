@@ -1,0 +1,15 @@
+<div class="inbox">
+    <h2>Inbox</h2>
+    <div *ngIf="messages.length > 0; else noMessages">
+      <div *ngFor="let message of messages" class="message">
+        <h3>{{ message.subject }}</h3>
+        <p><strong>From:</strong> {{ getUserName(message.from) }}</p>
+        <p>{{ message.body }}</p>
+        <small>{{ message.timestamp | date:'short' }}</small>
+      </div>
+    </div>
+    <ng-template #noMessages>
+      <p>No received messages.</p>
+    </ng-template>
+  </div>
+  
